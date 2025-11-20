@@ -1,0 +1,160 @@
+date,region,channel,category,product,customer_segment,units_sold,unit_price,discount_pct,revenue,cost,profit,returned
+2024-01-01,East,Online,Home,Lamp,,79.0,35,0.1,2488.5,2031.97,456.53,No
+2024-01-01,West,Wholesale,Fashion,Jeans,Consumer,68.0,40,0.15,2312.0,1493.21,818.79,No
+2024-01-01,South,Online,Grocery,Snacks,Consumer,46.0,3,0.15,117.3,78.95,38.35,No
+2024-01-08,South,Retail,Home,Chair,Corporate,55.0,60,0.1,2970.0,1908.61,1061.39,Yes
+2024-01-08,West,Online,Grocery,Cereal,Corporate,57.0,5,0.05,270.75,208.76,61.99,No
+2024-01-08,East,Online,Grocery,Cereal,Small Business,8.0,5,0.05,38.0,26.84,11.16,No
+2024-01-15,West,Retail,Electronics,Laptop,Small Business,66.0,900,0.15,50490.0,37840.99,12649.01,No
+2024-01-15,West,Retail,Home,Chair,Consumer,57.0,60,0.15,2907.0,2003.47,903.53,No
+2024-01-15,West,Online,Electronics,Headphones,Consumer,75.0,80,0.0,6000.0,4758.37,1241.63,No
+2024-01-22,West,Wholesale,Home,Lamp,Small Business,9.0,35,0.05,299.25,206.37,92.88,No
+2024-01-22,East,Online,Grocery,Cereal,Corporate,41.0,5,0.1,184.5,137.97,46.53,No
+2024-01-22,East,Online,Home,Lamp,Consumer,9.0,35,0.05,299.25,197.2,102.05,No
+2024-01-29,East,Online,Home,Chair,Small Business,,60,0.15,3417.0,2593.85,823.15,No
+2024-01-29,West,Retail,Electronics,Headphones,,33.0,80,0.15,2244.0,1875.34,368.66,No
+2024-01-29,East,Retail,Grocery,Coffee,Corporate,10.0,8,0.15,68.0,54.46,13.54,No
+2024-02-05,South,Retail,Home,Lamp,Corporate,5.0,35,0.0,175.0,133.34,41.66,Yes
+2024-02-05,North,Online,Home,Chair,Small Business,41.0,60,,2460.0,1549.72,910.28,No
+2024-02-05,East,Wholesale,Fashion,Jeans,Consumer,56.0,40,0.15,1904.0,1262.25,641.75,No
+2024-02-12,North,Online,Electronics,Headphones,Consumer,,80,0.1,4176.0,2796.51,1379.49,No
+2024-02-12,East,Retail,Fashion,Jeans,Consumer,79.0,40,0.15,2686.0,1771.17,914.83,No
+2024-02-12,West,Online,Grocery,Snacks,Corporate,20.0,3,0.0,60.0,38.26,21.74,No
+2024-02-19,West,Online,Home,Lamp,Small Business,23.0,35,0.15,684.25,520.91,163.34,No
+2024-02-19,North,Wholesale,Fashion,T-Shirt,Consumer,27.0,15,0.1,364.5,298.65,65.85,No
+2024-02-19,West,Retail,Grocery,Cereal,Consumer,16.0,5,,80.0,66.01,13.99,No
+2024-02-26,North,Online,Home,Chair,Small Business,76.0,60,0.15,3876.0,3196.3,679.7,No
+2024-02-26,East,Retail,Electronics,Phone,Small Business,70.0,500,0.05,33250.0,23677.53,9572.47,No
+2024-02-26,West,Online,Grocery,Snacks,Consumer,21.0,3,0.15,53.55,39.74,13.81,Yes
+2024-03-04,East,Retail,Home,Table,,55.0,150,0.05,7837.5,6477.89,1359.61,No
+2024-03-04,North,Retail,Electronics,Phone,Small Business,8.0,500,0.1,3600.0,2851.7,748.3,Yes
+2024-03-04,West,Retail,Electronics,Phone,Corporate,41.0,500,0.15,17425.0,11895.83,5529.17,No
+2024-03-11,East,Wholesale,Grocery,Snacks,Consumer,37.0,3,0.15,94.35,68.06,26.29,No
+2024-03-11,South,Wholesale,Fashion,Jeans,Corporate,27.0,40,0.05,1026.0,680.79,345.21,No
+2024-03-11,South,Online,Grocery,Snacks,Consumer,,3,0.1,124.2,87.55,36.65,No
+2024-03-18,West,Online,Grocery,Coffee,Corporate,12.0,8,0.15,81.6,57.05,24.55,Yes
+2024-03-18,East,Wholesale,Home,Lamp,Corporate,55.0,35,0.0,1925.0,1229.61,695.39,No
+2024-03-18,South,Retail,Fashion,Jeans,Corporate,58.0,40,0.1,2088.0,1319.13,768.87,No
+2024-03-25,North,Online,Home,Lamp,Corporate,59.0,35,0.15,1755.25,1371.77,383.48,No
+2024-03-25,West,Retail,Fashion,Sneakers,Small Business,59.0,70,0.05,3923.5,2378.97,1544.53,No
+2024-03-25,East,Wholesale,Electronics,Phone,Consumer,38.0,500,0.15,16150.0,11907.5,4242.5,No
+2024-04-01,West,Online,Electronics,Phone,Consumer,26.0,500,,13000.0,9163.7,3836.3,No
+2024-04-01,West,Wholesale,Electronics,Phone,Corporate,51.0,500,0.0,25500.0,17285.26,8214.74,No
+2024-04-01,North,Retail,Fashion,T-Shirt,Consumer,27.0,15,0.05,384.75,290.09,94.66,No
+2024-04-08,South,Wholesale,Fashion,Jeans,Corporate,8.0,40,0.15,272.0,168.0,104.0,No
+2024-04-08,North,Wholesale,Grocery,Coffee,Corporate,55.0,8,0.1,396.0,330.81,65.19,No
+2024-04-08,North,Retail,Home,Table,Consumer,39.0,150,0.1,5265.0,3252.7,2012.3,No
+2024-04-15,South,Retail,Fashion,Sneakers,Corporate,72.0,70,0.05,4788.0,3706.79,1081.21,No
+2024-04-15,North,Online,Electronics,Phone,Consumer,28.0,500,0.15,11900.0,8853.38,3046.62,No
+2024-04-15,West,Retail,Electronics,Headphones,Small Business,59.0,80,0.0,4720.0,3705.09,1014.91,No
+2024-04-22,South,Online,Electronics,Phone,Corporate,23.0,500,0.0,11500.0,7053.77,4446.23,No
+2024-04-22,East,Online,Home,Table,Corporate,20.0,150,,3000.0,1868.78,1131.22,No
+2024-04-22,West,Wholesale,Electronics,Headphones,Consumer,57.0,80,0.05,4332.0,3654.31,677.69,No
+2024-04-29,South,Online,Home,Lamp,Small Business,13.0,35,0.05,432.25,349.79,82.46,No
+2024-04-29,South,Wholesale,Fashion,T-Shirt,Consumer,70.0,15,0.0,1050.0,764.75,285.25,No
+2024-04-29,West,Online,Electronics,Phone,Corporate,49.0,500,0.15,20825.0,14318.32,6506.68,No
+2024-05-06,East,Online,Grocery,Cereal,Corporate,23.0,5,0.1,103.5,73.34,30.16,No
+2024-05-06,South,Retail,Fashion,T-Shirt,Consumer,7.0,15,0.0,105.0,69.23,35.77,No
+2024-05-06,West,Online,Electronics,Laptop,Consumer,48.0,900,0.0,43200.0,36394.69,6805.31,Yes
+2024-05-13,North,Retail,Electronics,Phone,Small Business,22.0,500,0.1,9900.0,7497.76,2402.24,No
+2024-05-13,East,Online,Electronics,Laptop,Corporate,79.0,900,,60435.0,50745.79,9689.21,Yes
+2024-05-13,South,Online,Grocery,Coffee,Corporate,45.0,8,0.15,306.0,259.05,46.95,No
+2024-05-20,North,Online,Electronics,Phone,Consumer,39.0,500,0.0,19500.0,16285.09,3214.91,No
+2024-05-20,North,Wholesale,Electronics,Laptop,Corporate,9.0,900,0.1,7290.0,5123.51,2166.49,No
+2024-05-20,South,Wholesale,Electronics,Phone,Small Business,63.0,500,0.1,28350.0,21043.36,7306.64,Yes
+2024-05-27,North,Wholesale,Home,Table,Consumer,73.0,150,0.1,9855.0,7760.59,2094.41,No
+2024-05-27,East,Online,Electronics,Laptop,Consumer,77.0,900,0.05,65835.0,43639.43,22195.57,No
+2024-05-27,West,Retail,Electronics,Laptop,Consumer,38.0,900,0.05,32490.0,25767.16,6722.84,No
+2024-06-03,West,Online,Fashion,Jeans,Consumer,21.0,40,0.15,714.0,514.09,199.91,No
+2024-06-03,North,Online,Fashion,Sneakers,Corporate,68.0,70,0.15,4046.0,3419.34,626.66,No
+2024-06-03,South,Retail,Home,Table,Small Business,42.0,150,0.0,6300.0,5014.25,1285.75,No
+2024-06-10,East,Retail,Home,Table,Consumer,78.0,150,0.0,11700.0,7775.36,3924.64,No
+2024-06-10,South,Retail,Electronics,Phone,Corporate,79.0,500,0.1,35550.0,26104.93,9445.07,No
+2024-06-10,West,Wholesale,Home,Lamp,Corporate,36.0,35,0.05,1197.0,898.33,298.67,No
+2024-06-17,North,Online,Fashion,Jeans,Corporate,5.0,40,0.0,200.0,143.04,56.96,No
+2024-06-17,South,Online,Fashion,Sneakers,Corporate,,70,0.0,3570.0,2755.85,814.15,No
+2024-06-17,East,Wholesale,Grocery,Coffee,Consumer,56.0,8,0.1,403.2,296.01,107.19,No
+2024-06-24,South,Retail,Grocery,Cereal,Small Business,18.0,5,0.1,81.0,53.71,27.29,No
+2024-06-24,East,Wholesale,Fashion,T-Shirt,Small Business,42.0,15,0.1,567.0,396.5,170.5,No
+2024-06-24,East,Online,Grocery,Snacks,Corporate,48.0,3,,144.0,118.46,25.54,No
+2024-07-01,West,Retail,Home,Lamp,Consumer,38.0,35,0.1,1197.0,941.27,255.73,No
+2024-07-01,East,Retail,Electronics,Laptop,Consumer,60.0,900,0.1,48600.0,41146.16,7453.84,No
+2024-07-01,North,Online,Fashion,Jeans,Consumer,79.0,40,0.05,3002.0,2015.16,986.84,No
+2024-07-08,East,Online,Home,Chair,Small Business,10.0,60,0.05,570.0,424.08,145.92,No
+2024-07-08,East,Retail,Fashion,Jeans,Consumer,61.0,40,0.05,2318.0,1713.44,604.56,No
+2024-07-08,East,Online,Grocery,Snacks,Consumer,24.0,3,0.0,72.0,52.74,19.26,No
+2024-07-15,South,Retail,Electronics,Headphones,Corporate,7.0,80,0.0,560.0,387.69,172.31,No
+2024-07-15,North,Wholesale,Fashion,Jeans,Corporate,77.0,40,0.0,3080.0,1937.86,1142.14,No
+2024-07-15,South,Wholesale,Home,Chair,Corporate,64.0,60,0.15,3264.0,2291.75,972.25,No
+2024-07-22,East,Online,Fashion,T-Shirt,Small Business,76.0,15,0.1,1026.0,819.59,206.41,No
+2024-07-22,South,Wholesale,Electronics,Phone,Consumer,30.0,500,0.05,14250.0,9828.33,4421.67,No
+2024-07-22,North,Retail,Grocery,Cereal,Small Business,27.0,5,0.1,121.5,88.17,33.33,No
+2024-07-29,North,Wholesale,Home,Lamp,Corporate,55.0,35,0.05,1828.75,1526.93,301.82,No
+2024-07-29,West,Retail,Grocery,Cereal,Small Business,31.0,5,0.15,131.75,111.91,19.84,No
+2024-07-29,North,Online,Home,Table,,14.0,150,0.0,2100.0,1720.3,379.7,No
+2024-08-05,South,Online,Home,Chair,Small Business,33.0,60,0.1,1782.0,1251.39,530.61,No
+2024-08-05,East,Wholesale,Home,Lamp,Small Business,24.0,35,0.1,756.0,634.87,121.13,No
+2024-08-05,South,Wholesale,Home,Table,Corporate,66.0,150,0.05,9405.0,7080.68,2324.32,Yes
+2024-08-12,West,Wholesale,Grocery,Coffee,Consumer,35.0,8,0.05,266.0,164.18,101.82,Yes
+2024-08-12,South,Online,Fashion,T-Shirt,Small Business,25.0,15,0.05,356.25,288.46,67.79,No
+2024-08-12,North,Online,Home,Lamp,Corporate,51.0,35,0.0,1785.0,1403.12,381.88,No
+2024-08-19,North,Online,Fashion,Sneakers,Consumer,79.0,70,0.05,5253.5,3606.98,1646.52,No
+2024-08-19,South,Wholesale,Electronics,Headphones,,28.0,80,0.0,2240.0,1623.09,616.91,No
+2024-08-19,West,Online,Electronics,Headphones,Consumer,32.0,80,0.05,2432.0,1862.63,569.37,No
+2024-08-26,West,Online,Electronics,Laptop,Corporate,75.0,900,,67500.0,45730.19,21769.81,No
+2024-08-26,East,Wholesale,Grocery,Coffee,Small Business,49.0,8,0.0,392.0,281.46,110.54,No
+2024-08-26,South,Online,Fashion,Jeans,Small Business,42.0,40,0.1,1512.0,965.88,546.12,No
+2024-09-02,North,Wholesale,Home,Lamp,Small Business,38.0,35,0.15,1130.5,904.61,225.89,No
+2024-09-02,West,Retail,Home,Lamp,Consumer,63.0,35,0.1,1984.5,1200.48,784.02,No
+2024-09-02,East,Online,Home,Table,Small Business,36.0,150,0.15,4590.0,3679.86,910.14,No
+2024-09-09,West,Online,Fashion,Sneakers,Consumer,11.0,70,0.05,731.5,454.54,276.96,No
+2024-09-09,East,Online,Home,Chair,,73.0,60,0.15,3723.0,2546.41,1176.59,No
+2024-09-09,East,Wholesale,Home,Table,Consumer,57.0,150,0.15,7267.5,4759.32,2508.18,No
+2024-09-16,West,Online,Fashion,Jeans,Corporate,18.0,40,0.0,720.0,529.49,190.51,No
+2024-09-16,East,Online,Fashion,Jeans,Corporate,33.0,40,0.0,1320.0,1020.1,299.9,No
+2024-09-16,South,Retail,Grocery,Cereal,Consumer,21.0,5,0.0,105.0,80.1,24.9,No
+2024-09-23,East,Online,Fashion,Sneakers,Corporate,10.0,70,0.1,630.0,472.09,157.91,No
+2024-09-23,North,Online,Home,Table,Corporate,66.0,150,,9405.0,6635.31,2769.69,No
+2024-09-23,South,Wholesale,Electronics,Phone,Small Business,25.0,500,0.1,11250.0,7561.95,3688.05,No
+2024-09-30,North,Wholesale,Home,Lamp,Small Business,,35,0.05,931.0,590.02,340.98,No
+2024-09-30,South,Wholesale,Grocery,Cereal,Small Business,77.0,5,0.05,365.75,262.81,102.94,No
+2024-09-30,West,Online,Electronics,Phone,Consumer,43.0,500,0.1,19350.0,15572.41,3777.59,No
+2024-10-07,West,Wholesale,Fashion,Sneakers,Corporate,53.0,70,0.0,3710.0,2958.74,751.26,No
+2024-10-07,North,Wholesale,Grocery,Coffee,Corporate,74.0,8,0.15,503.2,333.33,169.87,No
+2024-10-07,East,Wholesale,Fashion,Jeans,Consumer,20.0,40,0.1,720.0,611.88,108.12,No
+2024-10-14,South,Retail,Home,Lamp,Corporate,52.0,35,0.15,1547.0,1303.76,243.24,No
+2024-10-14,South,Wholesale,Fashion,Jeans,Small Business,21.0,40,0.05,798.0,597.76,200.24,No
+2024-10-14,West,Online,Fashion,Sneakers,,,70,0.1,2709.0,2169.89,539.11,No
+2024-10-21,South,Online,Electronics,Phone,Corporate,70.0,500,0.1,31500.0,22537.8,8962.2,No
+2024-10-21,East,Wholesale,Electronics,Laptop,Consumer,50.0,900,0.15,38250.0,23453.79,14796.21,Yes
+2024-10-21,South,Online,Grocery,Cereal,Consumer,29.0,5,0.1,130.5,92.05,38.45,No
+2024-10-28,South,Online,Home,Table,Consumer,66.0,150,0.0,9900.0,6044.18,3855.82,Yes
+2024-10-28,South,Wholesale,Electronics,Phone,Small Business,41.0,500,0.0,20500.0,13627.29,6872.71,No
+2024-10-28,East,Wholesale,Fashion,T-Shirt,Small Business,75.0,15,0.15,956.25,589.29,366.96,No
+2024-11-04,North,Wholesale,Fashion,T-Shirt,Consumer,61.0,15,0.05,869.25,529.53,339.72,No
+2024-11-04,West,Retail,Electronics,Laptop,Consumer,13.0,900,0.1,10530.0,7890.32,2639.68,No
+2024-11-04,East,Retail,Home,Chair,Corporate,36.0,60,0.1,1944.0,1275.48,668.52,No
+2024-11-11,East,Online,Electronics,Phone,Corporate,60.0,500,0.1,27000.0,18042.48,8957.52,No
+2024-11-11,East,Online,Fashion,Sneakers,Corporate,15.0,70,0.1,945.0,633.48,311.52,No
+2024-11-11,South,Wholesale,Electronics,Laptop,Corporate,32.0,900,0.0,28800.0,24418.62,4381.38,Yes
+2024-11-18,North,Retail,Electronics,Laptop,Small Business,37.0,900,0.05,31635.0,23103.52,8531.48,No
+2024-11-18,West,Online,Home,Lamp,Small Business,57.0,35,0.05,1895.25,1187.3,707.95,No
+2024-11-18,West,Wholesale,Electronics,Phone,Small Business,35.0,500,0.1,15750.0,9470.26,6279.74,No
+2024-11-25,North,Retail,Home,Table,Small Business,16.0,150,0.1,2160.0,1400.29,759.71,Yes
+2024-11-25,East,Online,Electronics,Headphones,,74.0,80,0.1,5328.0,4210.49,1117.51,No
+2024-11-25,West,Retail,Home,Chair,Small Business,,60,0.15,3672.0,2834.68,837.32,Yes
+2024-12-02,East,Online,Grocery,Coffee,Corporate,26.0,8,0.05,197.6,122.25,75.35,No
+2024-12-02,South,Wholesale,Electronics,Headphones,Small Business,15.0,80,0.0,1200.0,817.08,382.92,No
+2024-12-02,East,Wholesale,Fashion,Jeans,Small Business,33.0,40,0.15,1122.0,792.74,329.26,No
+2024-12-09,East,Wholesale,Home,Table,Consumer,26.0,150,0.1,3510.0,2345.79,1164.21,No
+2024-12-09,West,Online,Electronics,Phone,Small Business,61.0,500,0.0,30500.0,25802.83,4697.17,No
+2024-12-09,West,Retail,Home,Chair,Corporate,28.0,60,0.15,1428.0,1057.7,370.3,No
+2024-12-16,East,Retail,Electronics,Phone,Consumer,50.0,500,0.05,23750.0,18768.58,4981.42,No
+2024-12-16,West,Online,Grocery,Coffee,Corporate,,8,0.0,600.0,451.1,148.9,No
+2024-12-16,North,Retail,Grocery,Coffee,Consumer,6.0,8,0.15,40.8,28.9,11.9,No
+2024-12-23,North,Online,Fashion,Jeans,Corporate,42.0,40,0.15,1428.0,1091.34,336.66,No
+2024-12-23,West,Retail,Electronics,Laptop,Small Business,50.0,900,0.15,38250.0,23125.64,15124.36,No
+2024-12-23,West,Online,Fashion,Jeans,Corporate,34.0,40,0.0,1360.0,1096.33,263.67,No
+2024-12-30,East,Retail,Fashion,Jeans,Small Business,19.0,40,0.05,722.0,440.63,281.37,No
+2024-12-30,West,Wholesale,Electronics,Headphones,Small Business,77.0,80,0.1,5544.0,4175.94,1368.06,No
+2024-12-30,West,Retail,Grocery,Snacks,Corporate,11.0,3,0.1,29.7,24.46,5.24,No
