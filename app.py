@@ -8,12 +8,13 @@ from io import BytesIO
 import matplotlib.pyplot as plt
 import numpy as np
 import torch  # <--- TAMBAHAN
+import tempfile
 
 # =========================
 # 0. OPSIONAL: AI (Phi-3 Mini)
 # =========================
 AI_ENABLED = True  # kalau mau matikan AI, ubah ke False
-AI_MODEL_ID = "distilgpt2"
+AI_MODEL_ID = "microsoft/Phi-3-mini-4k-instruct"
 
 if AI_ENABLED:
     try:
@@ -51,7 +52,7 @@ def ai_generate_insight(df: pd.DataFrame, template_name: str) -> str:
         return "Model AI belum berhasil di-load."
 
     # ---- Ringkasan data untuk prompt ----
-    sample_rows = min(len(df), 50)
+    sample_rows = min(len(df), 10)
     sample_df = df.head(sample_rows)
     # GANTI: to_markdown() -> to_string() supaya tidak butuh 'tabulate'
     sample_table = sample_df.to_string(index=False)
@@ -85,11 +86,12 @@ Tuliskan analisis dan insightmu di bawah ini:
 
     out = pipe(
         prompt,
-        max_new_tokens=512,    # biar cepet
+        max_new_tokens=256,
         temperature=0.7,
         top_p=0.9,
         do_sample=True,
         pad_token_id=pipe.tokenizer.eos_token_id,
+        truncation=True
     )
 
     text = out[0]["generated_text"]
@@ -254,14 +256,12 @@ def pdf_write_paragraph(pdf: FPDF, text: str, line_height: float = 6, max_len: i
 
 def fig_to_pdf_image(pdf: FPDF, fig, x: float = 10, w: float = 190):
     """
-    Simpan matplotlib figure ke buffer PNG lalu gambar ke PDF.
+    Simpan matplotlib figure ke file PNG sementara lalu masukkan ke FPDF.
     """
-    buf = BytesIO()
-    fig.savefig(buf, format="png", bbox_inches="tight")
-    plt.close(fig)
-    buf.seek(0)
-    pdf.image(buf, x=x, w=w)
-
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as tmp:
+        fig.savefig(tmp.name, format="png", bbox_inches="tight")
+        plt.close(fig)
+        pdf.image(tmp.name, x=x, w=w)
 
 def pdf_table_simple(
     pdf: FPDF,
@@ -757,6 +757,7 @@ if df is not None:
 
 else:
     st.info("Silakan upload file di sidebar untuk mulai analisis.")
+
 
 
 
