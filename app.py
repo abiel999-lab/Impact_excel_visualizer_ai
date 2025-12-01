@@ -706,7 +706,9 @@ if df is not None:
     # 5.5 AI Insight
     st.subheader("5️⃣ AI Insight (Model AI Lokal)")
 
-    ai_text = ""
+    # inisialisasi tempat menyimpan hasil AI di session_state
+    if "ai_text" not in st.session_state:
+        st.session_state["ai_text"] = ""
 
     if AI_ENABLED:
         with st.expander("Klik untuk menghasilkan insight AI"):
@@ -714,14 +716,17 @@ if df is not None:
             st.markdown("⚠️ Pertama kali jalan bisa agak lama karena harus download model & load ke RAM.")
             if st.button("Generate Insight dengan AI"):
                 with st.spinner("AI sedang menganalisis data..."):
-                    ai_text = ai_generate_insight(df, template_dashboard)
-                st.markdown("---")
-                st.markdown("### Hasil Insight AI")
-                st.write(ai_text)
+                    st.session_state["ai_text"] = ai_generate_insight(df, template_dashboard)
     else:
         st.info("Fitur AI belum aktif. Pastikan `transformers` terinstall dan `AI_ENABLED = True` di app.py.")
 
     st.markdown("---")
+    st.markdown("### Hasil Insight AI")
+    if st.session_state["ai_text"]:
+        st.write(st.session_state["ai_text"])
+    else:
+        st.info("Belum ada insight dari AI. Klik tombol di atas dulu.")
+
 
     # 5.6 Export Laporan (PDF)
     st.subheader("6️⃣ Export Laporan")
@@ -733,8 +738,10 @@ if df is not None:
     if "last_ai_text" not in st.session_state:
         st.session_state["last_ai_text"] = ""
 
-    if ai_text:
-        st.session_state["last_ai_text"] = ai_text
+    # kalau ada hasil AI terbaru, simpan ke last_ai_text
+    if st.session_state.get("ai_text"):
+        st.session_state["last_ai_text"] = st.session_state["ai_text"]
+
 
     use_ai_in_report = st.checkbox(
         "Sertakan insight AI (kalau tersedia)",
@@ -762,6 +769,7 @@ if df is not None:
 
 else:
     st.info("Silakan upload file di sidebar untuk mulai analisis.")
+
 
 
 
