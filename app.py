@@ -32,13 +32,18 @@ def load_local_llm():
         "text-generation",
         model=AI_MODEL_ID,
         device="cpu",
-        max_new_tokens=512,
         do_sample=True,
         temperature=0.7,
         top_p=0.9,
         repetition_penalty=1.1,
     )
+
+    # Penting untuk GPT2 family → cegah IndexError
+    if gen.tokenizer.pad_token_id is None:
+        gen.tokenizer.pad_token = gen.tokenizer.eos_token
+
     return gen
+
 
 def ai_generate_insight(df: pd.DataFrame, template_name: str) -> str:
     """
@@ -86,7 +91,7 @@ Tuliskan analisis dan insightmu di bawah ini:
 
     out = pipe(
         prompt,
-        max_new_tokens=256,
+        max_new_tokens=200,
         temperature=0.7,
         top_p=0.9,
         do_sample=True,
@@ -699,14 +704,14 @@ if df is not None:
     st.markdown("---")
 
     # 5.5 AI Insight
-    st.subheader("5️⃣ AI Insight (Phi-3 Mini)")
+    st.subheader("5️⃣ AI Insight (Model AI Lokal)")
 
     ai_text = ""
 
     if AI_ENABLED:
         with st.expander("Klik untuk menghasilkan insight AI"):
-            st.markdown("Model: **microsoft/Phi-3-mini-4k-instruct** (jalan lokal via HuggingFace Transformers).")
-            st.markdown("⚠️ Pertama kali jalan bisa lama karena harus download model & load ke RAM/VRAM.")
+            st.markdown("Model: **distilgpt2** (model kecil lokal via HuggingFace Transformers).")
+            st.markdown("⚠️ Pertama kali jalan bisa agak lama karena harus download model & load ke RAM.")
             if st.button("Generate Insight dengan AI"):
                 with st.spinner("AI sedang menganalisis data..."):
                     ai_text = ai_generate_insight(df, template_dashboard)
@@ -757,6 +762,7 @@ if df is not None:
 
 else:
     st.info("Silakan upload file di sidebar untuk mulai analisis.")
+
 
 
 
