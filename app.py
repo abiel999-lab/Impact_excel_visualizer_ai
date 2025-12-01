@@ -47,19 +47,19 @@ def load_local_llm():
 
 def ai_generate_insight(df: pd.DataFrame, template_name: str) -> str:
     """
-    Generate insight dengan Phi-3 Mini.
+    Generate insight dengan model kecil (distilgpt2).
+    Dibuat defensif supaya kalau ada error atau hasil kosong tetap ada pesan.
     """
     if not AI_ENABLED:
         return "AI belum diaktifkan atau modul transformers belum terinstall."
 
     pipe = load_local_llm()
     if pipe is None:
-        return "Model AI belum berhasil di-load."
+        return "Model AI belum berhasil di-load (mungkin RAM tidak cukup atau model belum ter-install)."
 
-    # ---- Ringkasan data untuk prompt ----
+    # ---- Ringkasan data untuk prompt (dibatasi) ----
     sample_rows = min(len(df), 10)
     sample_df = df.head(sample_rows)
-    # GANTI: to_markdown() -> to_string() supaya tidak butuh 'tabulate'
     sample_table = sample_df.to_string(index=False)
 
     numeric_cols = df.select_dtypes(include="number").columns.tolist()
@@ -89,22 +89,41 @@ Contoh {sample_rows} baris pertama (tabel teks):
 Tuliskan analisis dan insightmu di bawah ini:
 """.strip()
 
-    out = pipe(
-        prompt,
-        max_new_tokens=200,
-        temperature=0.7,
-        top_p=0.9,
-        do_sample=True,
-        pad_token_id=pipe.tokenizer.eos_token_id,
-        truncation=True
-    )
+    # Batasi panjang prompt dalam karakter supaya aman
+    MAX_PROMPT_CHARS = 2000
+    if len(prompt) > MAX_PROMPT_CHARS:
+        prompt = prompt[:MAX_PROMPT_CHARS]
 
-    text = out[0]["generated_text"]
-    # Banyak model mengembalikan prompt + jawaban → potong prefix prompt
+    try:
+        out = pipe(
+            prompt,
+            max_new_tokens=256,
+            temperature=0.7,
+            top_p=0.9,
+            do_sample=True,
+            pad_token_id=pipe.tokenizer.eos_token_id,
+            truncation=True,
+        )
+    except Exception as e:
+        # Kalau ada error dari HuggingFace, kita balikin teks error saja
+        return f"Terjadi error saat menjalankan model AI: {e}"
+
+    text = out[0].get("generated_text", "")
+
+    # Kalau model cuma mengulang prompt, jangan dihapus total
     if text.startswith(prompt):
-        text = text[len(prompt):]
+        rest = text[len(prompt):].strip()
+        if rest:
+            text = rest  # hanya ambil jawaban kalau memang ada tambahan
 
-    return text.strip()
+    text = text.strip()
+
+    if not text:
+        # fallback supaya tidak pernah benar-benar kosong
+        return "AI tidak menghasilkan teks. Coba ulangi lagi atau perkecil dataset / kolom yang dianalisis."
+
+    return text
+
 
 
 
@@ -769,6 +788,7 @@ if df is not None:
 
 else:
     st.info("Silakan upload file di sidebar untuk mulai analisis.")
+
 
 
 
