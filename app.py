@@ -12,7 +12,7 @@ import torch  # <--- TAMBAHAN
 # =========================
 # 0. OPSIONAL: AI (Phi-3 Mini)
 # =========================
-AI_ENABLED = False  # kalau mau matikan AI, ubah ke False
+AI_ENABLED = True  # kalau mau matikan AI, ubah ke False
 AI_MODEL_ID = "microsoft/Phi-3-mini-4k-instruct"
 
 if AI_ENABLED:
@@ -769,5 +769,6 @@ if df is not None:
 
 else:
     st.info("Silakan upload file di sidebar untuk mulai analisis.")
+
 
 
