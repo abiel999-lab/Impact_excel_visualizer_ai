@@ -118,12 +118,12 @@ Tuliskan analisis dan insightmu di bawah ini:
 # 1. CONFIG APP
 # =========================
 st.set_page_config(
-    page_title="impact_excel_visualizer",
+    page_title="Impact Excel Visualizer",
     page_icon="📊",
     layout="wide",
 )
 
-st.title("📊 impact_excel_visualizer")
+st.title("📊 Impact Excel Visualizer")
 st.caption(
     "Excel & Data Visualizer + AI Insight - powered by Streamlit, Pandas, Plotly & gpt-oss-7b"
 )
@@ -769,4 +769,5 @@ if df is not None:
 
 else:
     st.info("Silakan upload file di sidebar untuk mulai analisis.")
+
 
