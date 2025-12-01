@@ -13,7 +13,7 @@ import torch  # <--- TAMBAHAN
 # 0. OPSIONAL: AI (Phi-3 Mini)
 # =========================
 AI_ENABLED = True  # kalau mau matikan AI, ubah ke False
-AI_MODEL_ID = "microsoft/Phi-3-mini-4k-instruct"
+AI_MODEL_ID = "distilgpt2"
 
 if AI_ENABLED:
     try:
@@ -24,32 +24,20 @@ if AI_ENABLED:
 
 @st.cache_resource(show_spinner=False)
 def load_local_llm():
-    """
-    Load model Phi-3 sekali (cache).
-    - Coba dulu pakai GPU (device_map="auto", float16)
-    - Kalau gagal, fallback ke CPU (device=-1, float32)
-    """
     if not AI_ENABLED:
         return None
 
-    try:
-        # Mode cepat: pakai GPU kalau tersedia
-        gen = pipeline(
-            "text-generation",
-            model=AI_MODEL_ID,
-            torch_dtype=torch.float16,
-            device_map="auto",
-        )
-    except Exception:
-        # Fallback aman: CPU biasa
-        gen = pipeline(
-            "text-generation",
-            model=AI_MODEL_ID,
-            torch_dtype=torch.float32,
-            device=-1,
-        )
+    gen = pipeline(
+        "text-generation",
+        model=AI_MODEL_ID,
+        device="cpu",
+        max_new_tokens=512,
+        do_sample=True,
+        temperature=0.7,
+        top_p=0.9,
+        repetition_penalty=1.1,
+    )
     return gen
-
 
 def ai_generate_insight(df: pd.DataFrame, template_name: str) -> str:
     """
@@ -769,6 +757,7 @@ if df is not None:
 
 else:
     st.info("Silakan upload file di sidebar untuk mulai analisis.")
+
 
 
 
